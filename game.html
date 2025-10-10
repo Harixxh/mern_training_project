@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors</title>
+</head>
+<body>
+     <h1> Rock Paper Scissors</h1>
+     <h3> choose your choices</h3>
+
+     <div class="choices">
+        <button onclick="play('rock')">Rock🤘</button>
+        <button onclick="play('paper')">Paper📃</button>
+        <button onclick="play('scissors')">Scissors✂️</button>
+     </div>
+
+     <div id="result">result</div>
+
+
+       <script>
+        function play(player) {
+          const choices=['rock','paper','scissors'];
+          let computer =choices[Math.floor(Math.random()*choices.length)];
+          let result='';
+          if(player === computer){
+            result='match draw';
+          }
+          else if((player ===('rock')&& computer ===('scissors'))|| (player === 'scissors'&& computer === 'paper')|| (player === 'paper'&& computer === 'rock')){
+            result='you win';
+        }
+        else{
+         result='you lose';
+        }
+
+     document.getElementById('result').innerHTML=result;
+    }
+       </script>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Grid Layout</title>
+    
+    <style>
+
+        *{
+            margin:0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        .container{
+            display: grid;
+            grid-template-areas:
+            "header header header header header"
+            "sidebar content1 content1 content1 content1"
+            "sidebar content2 content2 content3 content3"
+            "footer footer footer footer footer";
+            grid-template-columns: 100px 100px 100px 100px 100px;
+            grid-template-rows: 100px 10opx 100px 100px ;
+            gap: 15px;
+            padding:60px;
+            max-width: 900px;
+        }
+
+        .header {
+    grid-area: header;
+    background: #36ec36;
+    text-align: center;
+    font-size: 1.5em;
+    line-height: 80px;
+    border: 2px solid #222;
+}  
+ .sidebar{
+    grid-area: sidebar;
+      background: #36ec36;
+      text-align: center;
+          line-height: 215px;
+      border: 2px solid #222;
+ }
+   .content1{
+    grid-area: content1;
+      background: #36ec36;
+      text-align: center;
+       line-height: 100px;
+      border: 2px solid #222;
+   }
+   .content2{
+    grid-area: content2;
+      background: #36ec36;
+       line-height: 100px;
+      text-align: center;
+      border: 2px solid #222;
+   }
+   .content3{
+    grid-area: content3;
+      background: #36ec36;
+      text-align: center;
+       line-height: 100px;
+      border: 2px solid #222;
+   }
+   .footer{
+    grid-area: footer;
+      background: #36ec36;
+      text-align: center;
+      font-size: 1.5em;
+      line-height: 80px;
+      border: 2px solid #222;
+   }
+   @media screen and (min-width: 480px) and (max-width: 768px) {
+  body {
+    background-color: lightgreen;
+  }
+}
+        </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">Header</div>
+        <div class="sidebar">Side Bar</div>
+        <div class="content1">Content 1</div>
+        <div class="content2">Content 2</div>
+        <div class="content3">Content 3</div>
+        <div class="footer">Footer</div>
+    </div>
+</body>
+</html>
