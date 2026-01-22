@@ -25,6 +25,6 @@ app.post('/about',(req,res)=>{
 
 });
 
-app.listen(30000,()=>{
-    console.log('Server is running on port 30000');
+app.listen(3000,()=>{
+    console.log('Server is running on port 3000');
 });
