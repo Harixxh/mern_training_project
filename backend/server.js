@@ -1,8 +1,10 @@
 const express =require('express');
 const mongoose=require('mongoose');
 const dotenv=require('dotenv');
+const cors=require('cors')
 
 const app=express();
+app.use(cors());
 dotenv.config();
 mongoose.connect(process.env.dbpassword).then(()=>{
     console.log('Connected to MongoDB');

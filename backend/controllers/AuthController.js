@@ -33,7 +33,7 @@ exports.register=async(req,res)=>{
         process.env.JWTSECRECTKEY,
         {expiresIn:"1d"}
     )
-      res.send({token:{token}})
+      res.send({token})
      /* res.status(200).send(hashedpassword+ ' ' +pass+ ' Login successfully')*/
 
   

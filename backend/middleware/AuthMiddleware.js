@@ -1,6 +1,6 @@
 const jwt=require('jsonwebtoken');
 
-exports.protect=(req , res,next)=>{
+exports.protect=(req,res,next)=>{
     const token=req.headers.authorization
     if(!token || !token.startsWith('Bearer')){
         res.status(401).json({msg:"unauthorized token"})

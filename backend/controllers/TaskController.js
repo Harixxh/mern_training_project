@@ -13,7 +13,7 @@ user:req.user.id
 
 exports.getuser=async (req,res)=>{
    
-    const _id=req.body.user
+    const _id=req.params.id
 
     const users=await User.findOne({_id})
 
