@@ -26,11 +26,11 @@ const App = () => {
       <Route path="/products/:id" element={<ProductDetails/>}/>
 
     </Routes>
-    {/* <div>App</div>
+    <div>App</div>
     <Profile name="harish" age="20" skills={["HTML","CSS","JAVASCRIPT","JAVA"]}/>
     <State/>
     <Parent/>
-    <Form/> */}
+    <Form/>
     </>
     
   )
